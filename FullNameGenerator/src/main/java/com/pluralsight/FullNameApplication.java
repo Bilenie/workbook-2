@@ -30,9 +30,9 @@ public class FullNameApplication {
     and free the main from bunch of codes.
      */
     public static String generateFullName(String first, String middle, String last, String suffix) {
-    // Create a fullName variable starting with the first name, then add middle initial, last name, and suffix as needed.
+       // Create a fullName variable starting with the first name, then add middle initial, last name, and suffix as needed.
         String fullName = first;
-    // Add middle initial if available
+       // Add middle initial if available
         if (!middle.isEmpty()) {
             String middleInitial = middle.substring(0, 1).toUpperCase() + ".";
             fullName = fullName + " " + middleInitial;
