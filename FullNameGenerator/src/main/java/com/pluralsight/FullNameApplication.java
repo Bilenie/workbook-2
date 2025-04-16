@@ -50,4 +50,4 @@ public class FullNameApplication {
     }
 }
 //StringBuilder fullName = new StringBuilder();
-//    fullName.append(firstName); - kevin showed me this!
+//FullName.append(firstName); - kevin showed me this!
