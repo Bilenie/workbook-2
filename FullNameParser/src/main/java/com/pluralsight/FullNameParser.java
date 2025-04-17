@@ -8,48 +8,57 @@ public class FullNameParser {
 
         Scanner myScanner = new Scanner(System.in);
 
-        //prompts the user to enter a name in two kind of formating options.
-        System.out.println("Enter your first name => use this format (first last or first middle last):");
-        //store the answer in a string variable and trim the name using trim()
-        String fullName = myScanner.nextLine().trim();
+        /*Wrapped the if/else logic inside a while loop to continuously prompt the user
+        until they enter a valid name format (either first & last OR first, middle & last).*/
+
+        while(true) {
+
+            //prompts the user to enter a name in two kind of formating options.
+            System.out.println("Enter your first name => use this format (first last or first middle last):");
+            //store the answer in a string variable and trim the name using trim()
+            String fullName = myScanner.nextLine().trim();
 
 
-        //parse the name and print pieces information by using split()
+            //parse the name and print pieces information by using split()
 
-        String[] fullNameSplit = fullName.split(" ");
+            String[] fullNameSplit = fullName.split(" ");
 
-        if (fullNameSplit.length == 2) {
+            if (fullNameSplit.length == 2) {
 
 
-            //store the split pieces in a variable
+                //store the split pieces in a variable
 
-            String first = fullNameSplit[0];
-            String last = fullNameSplit[1];
+                String first = fullNameSplit[0];
+                String last = fullNameSplit[1];
 
-            //print first & last name if the condition is true.
+                //print first & last name if the condition is true.
 
-            System.out.println("First name: " + first);
-            System.out.println("Middle name: (none)");
-            System.out.println("Last name: " + last);
-        } else if (fullNameSplit.length == 3) {
+                System.out.println("First name: " + first);
+                System.out.println("Middle name: (none)");
+                System.out.println("Last name: " + last);
 
-            //store the split pieces in a variable
+                break;
+            } else if (fullNameSplit.length == 3) {
 
-            String first = fullNameSplit[0];
-            String middle = fullNameSplit[1];
-            String last = fullNameSplit[2];
+                //store the split pieces in a variable
 
-            // Convert middle name to capital initial + "."
-            String middleInitial = middle.substring(0, 1).toUpperCase() + ".";
+                String first = fullNameSplit[0];
+                String middle = fullNameSplit[1];
+                String last = fullNameSplit[2];
 
-            //print first & last name if the condition is true.
+                // Convert middle name to capital initial + "."
+                String middleInitial = middle.substring(0, 1).toUpperCase() + ".";
 
-            System.out.println("First name: " + first);
-            System.out.println("Middle name:" + middleInitial);
-            System.out.println("Last name: " + last);
+                //print first & last name if the condition is true.
 
-        } else {
-            System.out.println("please provide valid answer");
+                System.out.println("First name: " + first);
+                System.out.println("Middle name:" + middleInitial);
+                System.out.println("Last name: " + last);
+                break;
+
+            } else {
+                System.out.println("please provide valid answer");
+            }
         }
 
     }
