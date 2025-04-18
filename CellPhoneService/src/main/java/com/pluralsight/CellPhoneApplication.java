@@ -35,12 +35,40 @@ public class CellPhoneApplication {
 
         //use the getters to display this information
 
-        System.out.println("The SN is :" +  myPhone.getSerialNumber());
-        System.out.println("The Model is :" +  myPhone.getModel());
-        System.out.println("The Carrier is :" +  myPhone.getCarrier());
-        System.out.println("The Phone Number is :" +  myPhone.getPhoneNumber());
-        System.out.println("The Owner is :" +  myPhone.getOwner());
+//        System.out.println("The SN is :" +  myPhone.getSerialNumber());
+//        System.out.println("The Model is :" +  myPhone.getModel());
+//        System.out.println("The Carrier is :" +  myPhone.getCarrier());
+//        System.out.println("The Phone Number is :" +  myPhone.getPhoneNumber());
+//        System.out.println("The Owner is :" +  myPhone.getOwner());
 
+
+        //create my new phone called myPhone2.
+
+        CellPhone myPhone2 = new CellPhone();
+
+        myPhone2.setPhoneNumber("466-554-6464");
+        myPhone2.setOwner("Eric :-)");
+
+
+        //use the display method instead.The argument passed can be myPhone or myPhone2.
+        display(myPhone);
+
+        System.out.println("----------------My second phone-------------");
+
+        display(myPhone2);
+
+        myPhone.dial(myPhone2.getPhoneNumber());
+
+        myPhone2.dial(myPhone.getPhoneNumber());
+
+    }
+    //create a method here.Knowes how to display information for a phone
+    static void display(CellPhone myPhone2 ){
+        System.out.println("The SN is :" +  myPhone2.getSerialNumber());
+        System.out.println("The Model is :" +  myPhone2.getModel());
+        System.out.println("The Carrier is :" +  myPhone2.getCarrier());
+        System.out.println("The Phone Number is :" +  myPhone2.getPhoneNumber());
+        System.out.println("The Owner is :" +  myPhone2.getOwner());
     }
 
 }
