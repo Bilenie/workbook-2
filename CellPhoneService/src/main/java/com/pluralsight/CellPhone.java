@@ -18,7 +18,18 @@ public class CellPhone {
     this.phoneNumber = "";
     this.owner = "";
    }
-   //We are creating a method here
+   //The overloaded constructors EXERCISE 3 today class April 21
+    public  CellPhone(int sn, String model,String carrier, String phoneNumber, String owner){
+        this.serialNumber = sn;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+
+    }
+  //EXERCISE 3 today class April 21 end here
+
+    //We are creating a method here
 
     //Function is to dial a phone number
 
@@ -27,6 +38,8 @@ public class CellPhone {
        System.out.println(this.getOwner() + "'s phone is calling" + phoneNumber);
 
     }
+
+
 
    //We right-click and generate a getter and setter. usually last.
 

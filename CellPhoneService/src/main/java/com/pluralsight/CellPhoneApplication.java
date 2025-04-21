@@ -61,8 +61,15 @@ public class CellPhoneApplication {
 
         myPhone2.dial(myPhone.getPhoneNumber());
 
+        //create a new phone called myPhone3.EXERCISE 3 today class April 21
+
+        CellPhone myPhone3 = new CellPhone(  123456777,"Iphone 16 pro Max","T-mobile","8754452668","Bilenie Tilahun");
+        display(myPhone3);
+
+
     }
-    //create a method here.Knowes how to display information for a phone
+    //was here my mistake!
+    //create a method here.It knows how to display information for a phone.
     static void display(CellPhone myPhone2 ){
         System.out.println("The SN is :" +  myPhone2.getSerialNumber());
         System.out.println("The Model is :" +  myPhone2.getModel());
@@ -70,5 +77,6 @@ public class CellPhoneApplication {
         System.out.println("The Phone Number is :" +  myPhone2.getPhoneNumber());
         System.out.println("The Owner is :" +  myPhone2.getOwner());
     }
+
 
 }
