@@ -6,7 +6,7 @@ public class AddressBuilderPractice {
     static Scanner myScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Create empty array to store the Questions to ask
+        // Create list of Questions to ask
         String[] questions = {
                 "Full Name: ",
                 "Billing Street: ",
