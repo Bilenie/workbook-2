@@ -47,4 +47,22 @@ public class AddressBuilderPractice {
     public static String getAnswer() {
         return myScanner.nextLine().trim();
     }
+    // Eric code so smart...
+    public static String askQuestion(String question) {
+        boolean valid = false;
+        String answer = "";
+
+        while (!valid) {
+            System.out.print(question);
+            answer = myScanner.nextLine().trim();
+
+            if (answer.isEmpty()) {
+                System.out.println("Error: Field cannot be blank.");
+                continue; // go back to ask again
+            }
+            valid = true; // input is good
+        }
+
+        return answer;
+    }
 }
